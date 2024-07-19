@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup and Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color:#0A0B1E ;
+            color: white;
+        }
+        .form-container {
+            background-color: #1C1E3C;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            width: 320px;
+        }
+        .form-container form {
+            display: none;
+        }
+        .form-container form.active {
+            display: block;
+        }
+        .form-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .form-container input {
+            display: block;
+            width: calc(100% - 20px);
+            margin-bottom: 15px;
+            padding: 12px 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #6C63FF;
+            border: none;
+            border-radius: 6px;
+            color: #fff;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .form-container button:hover {
+            background-color: #5a53e3;
+        }
+        .form-container button:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 102, 204, 0.5);
+        }
+        .toggle-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .toggle-link a {
+            color: #0066cc;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .toggle-link a:hover {
+            color: #004499;
+        }
+        h2{
+            color: white;
+        }
+    </style>
+</head>
+<body background="img\background (1).jpg">
+    <div class="form-container">
+        <form id="signup-form" class="active">
+            <h2>Create new account</h2>
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" placeholder="First name" required>
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" placeholder="Last name" required>
+            <label for="email-signup">Email</label>
+            <input type="email" id="email-signup" placeholder="Email" required>
+            <label for="password-signup">Password</label>
+            <input type="password" id="password-signup" placeholder="Password" required>
+            <label>
+                <input type="checkbox" required> I agree to the terms and conditions
+            </label>
+            <button type="submit">Create account</button>
+            <div class="toggle-link">
+                Already a user? <a onclick="toggleForms()">Log In</a>
+            </div>
+        </form>
+        
+        <form id="login-form">
+            <h2>Login</h2>
+            <label for="email-login">Email</label>
+            <input type="email" id="email-login" placeholder="Email" required>
+            <label for="password-login">Password</label>
+            <input type="password" id="password-login" placeholder="Password" required>
+            <button type="submit">Log In</button>
+            <div class="toggle-link">
+                Don't have an account? <a onclick="toggleForms()">Sign Up</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleForms() {
+            document.getElementById('signup-form').classList.toggle('active');
+            document.getElementById('login-form').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

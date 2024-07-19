@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #0101019c;
+            color: #333;
+            background-image: url('vs1.jpg');
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        header {
+            background: linear-gradient(90deg, #833b14, #5d9bb1);
+            color: #fff;
+            padding: 15px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #080808;
+            text-decoration: Strikethrough;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #fbfbfb;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        #home {
+            background: url('background.jpg') no-repeat center center/cover;
+            color: #ffffff;
+            height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-shadow: 10px 6px 10px rgb(163, 86, 53);
+        }
+
+        #home h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        #home p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+
+        #about, #projects, #contact {
+            background: #00000070;
+            margin: 20px 0;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            color:#fdfcfc
+        }
+
+        #projects .project {
+            border: 1px solid #070707;
+            padding: 20px;
+            margin: 20px 0;
+            background: #fdfdfd4f;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        #projects .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.329);
+        }
+
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #contact-form label, 
+        #contact-form input, 
+        #contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #89262600;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        #contact-form button {
+            padding: 15px 30px;
+            background: linear-gradient(90deg, #000000, #000000);
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background 0.3s;
+        }
+
+        #contact-form button:hover {
+            background: linear-gradient(90deg, #4ea1d8, #c54712);
+        }
+
+        footer {
+            background: ##735da6;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Hello...!</h2>
+        <h1>I'm Prajwal Kotari</h1>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>"Hi there! I'm PRAJWAL V K, a third year student studying BCA at Government First Grade College Sagara. I'm passionate about Digital Marketing and enjoy learning new things. This website is a space for me to share my thoughts, experiences, and projects as I navigate my academic journey. I'm excited to connect with like-minded individuals and learn from others. Thanks for stopping by, and I look forward to growing and exploring together!"</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>DATA MARKETING SERVIVES</h3>
+            <p>"Crafting a Brighter Future..!"</p>
+            <a href="dataservice.html">Learn more about Data Marketing Services</a>
+         </section>
+
+         <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+            <div class="contact-info">
+                <p>You can also reach me at:</p>
+                <p><strong>Email:</strong> <a href="prajwalvk03@gmail.com">prajwalvk03@gmail.com</a></p>
+                <p><strong>Phone:</strong> <a href="tel:+1234567890">+6360899007</a></p>
+            </div>
+            <style>
+                #contact {
+                    padding: 50px;
+                    background-color: #0808086d;
+                    text-align: center;
+                }
+                #contact h2 {
+                    margin-bottom: 20px;
+                }
+                #contact-form {
+                    display: inline-block;
+                    max-width: 600px;
+                    width: 75%;
+                }
+                .form-group {
+                    margin-bottom: 15px;
+                    text-align: left;
+                }
+                .form-group label {
+                    display: block;
+                    margin-bottom: 5px;
+                }
+                .form-group input, .form-group textarea {
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid #cccccc;
+                    border-radius: 5px;
+                }
+                button {
+                    padding: 10px 20px;
+                    background-color: #333;
+                    color: #ffffff;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+                button:hover {
+                    background-color: #555555;
+                }
+                .contact-info {
+                    margin-top: 30px;
+                }
+                .contact-info p {
+                    margin: 5px 0;
+                }
+                .contact-info a {
+                    color: #b2abab;
+                    text-decoration: none;
+                }
+                .contact-info a:hover {
+                    text-decoration: underline;
+                }
+            </style>
+        </section>
+        
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+            <ul class="social-media-links">
+                <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/yourprofile" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/yourprofile" target="_blank">Twitter</a></li>
+            </ul>
+            <a href="#top" class="back-to-top">Back to top</a>
+        </div>
+        <style>
+            .footer-content {
+                text-align: center;
+                padding: 20px;
+                background-color: #33333355;
+                color: #f8f4f4;
+            }
+            .social-media-links {
+                list-style: none;
+                padding: 0;
+            }
+            .social-media-links li {
+                display: inline;
+                margin: 0 10px;
+            }
+            .social-media-links a {
+                color: #f9f6f6;
+                text-decoration: none;
+            }
+            .back-to-top {
+                display: block;
+                margin-top: 10px;
+                color: #fff;
+                text-decoration: none;
+            }
+        </style>
+    </footer>
+    
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message!');
+        });
+    </script>
+</body>
+</html>
